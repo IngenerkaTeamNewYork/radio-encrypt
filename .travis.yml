@@ -22,9 +22,7 @@ install:
 script:
   - pip install pytest
   - pytest radioencode/__init__.py
-  - coverage run radioencode/__init__.py
 
 after_success:
-  - codecov
   - pip install flake8
   - flake8 --count radioencode
